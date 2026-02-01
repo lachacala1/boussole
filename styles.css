@@ -1,0 +1,22 @@
+:root{--bg:#071127;--card:#0f172a;--accent:#06b6d4;--muted:#94a3b8;--glass:rgba(255,255,255,0.06)}*{box-sizing:border-box}html,body,#root{height:100%}body{margin:0;background:linear-gradient(180deg,var(--bg),#031024);color:#e6eef8;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;padding:18px;display:flex;align-items:center;justify-content:center;min-height:100vh}
+.app{width:100%;max-width:460px}
+.app-header{text-align:center;margin-bottom:8px}
+.sub{color:var(--muted);margin-top:4px}
+.compass-wrap{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:14px;box-shadow:0 6px 30px rgba(2,6,23,0.6);backdrop-filter:blur(6px)}
+.compass{width:84vw;max-width:360px;height:84vw;max-height:360px;border-radius:50%;margin:6px auto;position:relative;background:radial-gradient(circle at 50% 40%,rgba(255,255,255,0.02),transparent 40%),linear-gradient(180deg,#081229,#071127);border:2px solid rgba(255,255,255,0.04);display:flex;align-items:center;justify-content:center}
+.marks{position:absolute;inset:0;display:grid;place-items:center}
+.mark{position:absolute;font-weight:700;color:var(--muted);text-shadow:0 2px 6px rgba(2,6,23,0.8)}
+.N{top:14px;left:50%;transform:translateX(-50%)}
+.S{bottom:14px;left:50%;transform:translateX(-50%)}
+.E{right:14px;top:50%;transform:translateY(-50%)}
+.W{left:14px;top:50%;transform:translateY(-50%)}
+.needle{width:6px;height:48%;background:linear-gradient(180deg,var(--accent),#60f0ff);position:relative;border-radius:8px;box-shadow:0 8px 30px rgba(6,182,212,0.18);transform-origin:50% 92%;transition:transform 180ms linear}
+.needle::after{content:'';position:absolute;left:50%;top:-6px;transform:translateX(-50%);width:16px;height:16px;background:#fff;border-radius:50%;box-shadow:0 2px 8px rgba(2,6,23,0.6)}
+.readout{display:flex;flex-direction:column;align-items:center;margin-top:12px}
+.heading{font-size:28px;font-weight:700}
+.direction{color:var(--muted);margin-top:4px}
+.controls{display:flex;justify-content:center;margin-top:12px}
+.btn{background:linear-gradient(90deg,var(--accent),#3dd7ff);border:none;color:#012;text-transform:uppercase;padding:10px 20px;border-radius:999px;font-weight:700;box-shadow:0 8px 30px rgba(6,182,212,0.12)}
+.message{color:var(--muted);text-align:center;margin-top:10px;font-size:14px}
+.app-footer{text-align:center;margin-top:12px;color:var(--muted)}
+@media (min-width:780px){.compass{width:360px;height:360px}}

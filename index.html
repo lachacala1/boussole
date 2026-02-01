@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0f172a" />
+  <link rel="manifest" href="manifest.json">
+  <title>Boussole PWA</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <h1>Boussole</h1>
+      <p class="sub">Touchez «Activer» si demandé. Optimisé mobile.</p>
+    </header>
+
+    <section class="compass-wrap">
+      <div id="compass" class="compass" aria-label="Boussole">
+        <div class="marks">
+          <span class="mark N">N</span>
+          <span class="mark E">E</span>
+          <span class="mark S">S</span>
+          <span class="mark W">W</span>
+        </div>
+        <div id="needle" class="needle" aria-hidden="true"></div>
+      </div>
+      <div class="readout">
+        <div id="heading" class="heading">—°</div>
+        <div id="direction" class="direction">—</div>
+      </div>
+      <div class="controls">
+        <button id="enableBtn" class="btn">Activer la boussole</button>
+      </div>
+
+      <p id="message" class="message">Autorisez l'accès aux capteurs si demandé.</p>
+    </section>
+
+    <footer class="app-footer">
+      <small>Progressive Web App — Fonctionne hors-ligne après installation.</small>
+    </footer>
+  </main>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
